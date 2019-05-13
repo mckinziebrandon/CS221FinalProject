@@ -1,0 +1,35 @@
+log_level: info
+name_prefix: cnn_large
+
+# Vars used by more than one object:
+max_seq_len: &max_seq_len 500000
+
+vocab_size: &vocab_size 60000
+embed_size: &embed_size 256
+
+graph:
+  embedding:
+    input_dim: *vocab_size
+    output_dim: *embed_size
+    mask_zero: True
+  num_lstm_layers: 1
+  lstm:
+    return_sequences: True
+    stateful: True
+    units: 1024
+  dense:
+    units: *vocab_size
+    activation: ~
+
+data:
+  max_samples: ~
+  lower: True
+
+trainer:
+  train_params:
+    batch_size: 16
+    learning_rate: 0.001
+    steps_per_print: 10
+    steps_per_valid: ~
+  eval_params:
+    steps: 10

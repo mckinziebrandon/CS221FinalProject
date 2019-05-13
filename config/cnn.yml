@@ -1,0 +1,35 @@
+log_level: trace
+name_prefix: test
+
+# Vars used by more than one object:
+max_seq_len: &max_seq_len 10
+
+vocab_size: &vocab_size 10000
+embed_size: &embed_size 128
+
+graph:
+  embedding:
+    input_dim: *vocab_size
+    output_dim: *embed_size
+    mask_zero: True
+  lstm:
+    return_sequences: True
+    stateful: True
+    units: 512
+  dense:
+    units: *vocab_size
+    activation: softmax
+
+data:
+  max_samples: 100
+  lower: True
+
+trainer:
+  batch_size: 2
+  train_params:
+    epochs: 10
+    learning_rate: 0.001
+    steps_per_print: 5
+    steps_per_valid: 50
+  eval_params:
+    steps: 5

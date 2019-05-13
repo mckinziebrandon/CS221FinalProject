@@ -1,0 +1,14 @@
+dist
+build
+proj-venv
+
+**/data/**
+**/preprocessed_data/**
+**/processed_data/**
+**/models/**
+
+**/*.egg-info
+
+*.h5
+*.pkl
+vocab.txt
