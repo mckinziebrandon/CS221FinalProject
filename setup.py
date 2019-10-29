@@ -23,7 +23,7 @@ setup(
         'Keras-Applications==1.0.6',
         'Keras-Preprocessing==1.0.5',
         'lxml==4.2.5',
-        'nltk==3.4',
+        'nltk==3.4.5',
         'numpy==1.16.2',
         'Pympler==0.6',
         'PyYAML==3.12',
