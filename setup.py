@@ -24,7 +24,7 @@ setup(
         'Keras-Preprocessing==1.0.5',
         'lxml==4.2.5',
         'nltk==3.4',
-        'numpy==1.16.2',
+        'numpy==1.22.0',
         'Pympler==0.6',
         'PyYAML==3.12',
         'tensorflow==2.0.0-alpha0'
