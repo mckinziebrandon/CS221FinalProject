@@ -27,7 +27,7 @@ setup(
         'numpy==1.16.2',
         'Pympler==0.6',
         'PyYAML==3.12',
-        'tensorflow==2.0.0-alpha0'
+        'tensorflow==2.9.3'
     ])
 
 
